@@ -42,22 +42,6 @@ if test -n "$_sp_initializing"
 end
 set -x _sp_initializing true
 
-
-#
-# Test for STDERR-NOCARET feature: if this is off, fish will redirect stderr to
-# a file named in the string after `^`
-#
-
-
-if status test-feature stderr-nocaret
-else
-    echo "WARNING: you have not enabled the 'stderr-nocaret' feature."
-    echo "This means that you have to escape the caret (^) character when defining specs."
-    echo "Consider enabling stderr-nocaret: https://fishshell.com/docs/current/index.html#featureflags"
-end
-
-
-
 #
 # SPACK wrapper function, preprocessing arguments and flags.
 #
